@@ -16,7 +16,46 @@ mongoose.connect('mongodb+srv://pavanrayabagi1:uCrk047y1iAFHYSr@cluster.mongodb.
 });
 
 app.get('/', (req, res) => {
-  res.send('Hello, MongoDB!Great we have done it manually');
+  const html = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Colorful Express App</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+        }
+
+        .container {
+          text-align: center;
+        }
+
+        h1 {
+          color: #3498db;
+        }
+
+        p {
+          color: #e74c3c;
+          font-size: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Hello, MongoDB!</h1>
+        <p>Great, we have done it manually!</p>
+      </div>
+    </body>
+    </html>
+  `;
+  res.send(html);
 });
 
 const PORT = process.env.PORT || 443;
