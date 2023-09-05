@@ -14,15 +14,12 @@ Install PM2 Globally:
 
 Open your terminal and run the following command to install PM2 globally:
 
-bash
-Copy code
 npm install pm2 -g
 Verify Installation:
 
 Confirm that PM2 is installed correctly by checking its version:
 
-bash
-Copy code
+
 pm2 --version
 You should see the installed PM2 version displayed on your screen.
 
@@ -33,13 +30,11 @@ Now that PM2 is installed, it's time to create a startup script to ensure your N
 
 Run the following command to generate the startup script:
 
-bash
-Copy code
+
 pm2 startup
 This command will display a script that you need to copy and execute. It will look something like this:
 
-bash
-Copy code
+
 sudo env PATH=$PATH:/path/to/node/bin /path/to/pm2/bin/pm2 startup systemd -u your_username --hp /home/your_username
 Copy and paste this command into your terminal to set up the startup script.
 
@@ -49,8 +44,6 @@ Before you proceed, make sure all the PM2-managed processes you want to start on
 
 To save the currently running processes, execute the following command:
 
-bash
-Copy code
 pm2 save
 This will create a dump.pm2 file, ensuring that your scripts automatically start on server reboots.
 
@@ -59,8 +52,7 @@ With the PM2 startup script in place and your processes saved, your Node.js appl
 
 If you ever need to manually restart all processes, you can execute the following command:
 
-bash
-Copy code
+
 pm2 resurrect
 That's it! You've successfully set up PM2 to keep your Node.js apps running smoothly on your Linux server. Say goodbye to worrying about app downtime due to server reboots.
 
