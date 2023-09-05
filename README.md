@@ -10,7 +10,7 @@ In this guide, we'll walk you through the process of installing PM2 and setting 
 # Installing PM2
 Before diving into the setup process, ensure you have Node.js and npm installed on your Linux server. You can download and install them from the official website. Once that's done, proceed with the following steps:
 
-# Install PM2 Globally:
+Install PM2 Globally:
 
 Open your terminal and run the following command to install PM2 globally:
 
